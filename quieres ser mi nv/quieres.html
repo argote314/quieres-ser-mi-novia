@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Novia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            head{
+                background-color: peru;
+            }
+           body{
+            font-family: 'Lobster&display=swap';
+             text-align: center;
+             background-color: peru;
+             font-family: Verdana, Geneva, Tahoma, sans-serif; 
+             font-size: 220%;
+             
+           } 
+           input{
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+             font-size: 150%;
+             background-color: thistle;
+           }
+           img{
+               background-color: peru;
+           }
+        </style>
+        <script >
+            function accionParaCuandoEllaDigaQueSi(){
+                alert('Sabia que dirias que si :)');
+            }
+            function mueveElBoton(){
+                width = window.innerWidth;
+                heigth = window.innerHeight;
+
+                newWidth = (Math.random() * width);
+                newHeigth = (Math.random() * heigth);
+
+                document.getElementById('btnNo').style.position = "absolute";
+                document.getElementById('btnNo').style.left = newWidth + "px";
+                document.getElementById('btnNo').style.top = newHeigth + "px";
+            }
+        </script>
+    </head>
+    <body>
+        <br/>
+        <br/>
+        <h3>¿Quieres ser mi novia?</h3>
+
+        <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSI" value="SI">
+        <input type="button" id="btnNo" onmouseover="mueveElBoton()"value="NO">
+        <br/>
+        <img src="anime.png" alt="20" height="300">
+      
+    </body>
+</html>
